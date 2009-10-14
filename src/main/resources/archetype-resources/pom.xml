@@ -1,0 +1,75 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>${groupId}</groupId>
+  <artifactId>${artifactId}</artifactId>
+  <version>${version}</version>
+  <dependencies>
+    <!-- Clojure 1.0, in Maven Central -->
+    <dependency>
+      <groupId>org.clojure</groupId>
+      <artifactId>clojure</artifactId>
+      <version>1.0.0</version>
+    </dependency>
+
+    <!-- Alternate for Clojure 1.1 development snapshot: -->
+    <!--
+      <dependency>
+        <groupId>org.clojure</groupId>
+        <artifactId>clojure-lang</artifactId>
+        <version>1.1.0-alpha-SNAPSHOT</version>
+      </dependency>
+    -->
+
+    <!-- Uncomment for clojure-contrib snapshot: -->
+    <!--
+      <dependency>
+        <groupId>org.clojure</groupId>
+        <artifactId>clojure-contrib</artifactId>
+        <version>1.0-SNAPSHOT</version>
+      </dependency>
+    -->
+  </dependencies>
+  <repositories>
+
+    <!-- Uncomment for clojure-lang & clojure-contrib snapshots: -->
+    <!--
+      <repository>
+        <id>formos</id>
+        <name>Formos Software snapshot repository</name>
+        <url>http://tapestry.formos.com/maven-snapshot-repository</url>
+        <snapshots>
+          <enabled>true</enabled>
+        </snapshots>
+      </repository>
+    -->
+  </repositories>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>com.theoryinpractise</groupId>
+        <artifactId>clojure-maven-plugin</artifactId>
+        <version>1.1</version>
+        <configuration>
+          <testScript>src/scripts/runtests.clj</testScript>
+        </configuration>
+        <executions>
+          <execution>
+            <id>compile-clojure</id>
+            <phase>compile</phase>
+            <goals>
+              <goal>compile</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>test-cljoure</id>
+            <phase>test</phase>
+            <goals>
+              <goal>test</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>

@@ -1,0 +1,25 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.stuartsierra</groupId>
+  <artifactId>clojure-archetype</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <name>Archetype for Clojure projects</name>
+  <url>http://github.com/stuartsierra/clojure-archetype</url>
+  <developers>
+    <developer>
+      <id>stuartsierra</id>
+      <name>Stuart Sierra</name>
+      <email>mail@stuartsierra.com</email>
+      <url>http://www.stuartsierra.com/</url>		    
+    </developer>
+  </developers>
+  <licenses>
+    <license>
+      <name>Eclipse Public License 1.0</name>
+      <url>http://opensource.org/licenses/eclipse-1.0.php</url>
+      <distribution>repo</distribution>
+      <comments>Same license as Clojure</comments>
+    </license>
+  </licenses>
+</project>
